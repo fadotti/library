@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="table container">
+    <table>
+      <thead>
+        <tr>
+          <th>Cover</th>
+          <th>Author</th>
+          <th>Title</th>
+          <th>No. of Pages</th>
+          <th>Book Status</th>
+          <th>Modify Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="cover-container">
+              <div class="book-cover" id="orwell-1984">
+              </div>
+            </div>
+          </td>
+          <td>George Orwell</td>
+          <td>Nineteen Eighty-Four</td>
+          <td>355</td>
+          <td>
+            <div class="book-status-container">
+              <div class="book-status not-read">Not Read</div>
+            </div>
+          </td>
+          <td>
+            <div class="modify-status-container">
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </button>
+              <input type="checkbox" class="book-status-modifier">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cover-container">
+              <div class="book-cover" id="verne-la-isla-misteriosa">
+              </div>
+            </div>
+          </td>
+          <td>Jules Verne</td>
+          <td>The Mysterious Island</td>
+          <td>766</td>
+          <td>
+            <div class="book-status-container">
+              <div class="book-status read">Read</div>
+            </div>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

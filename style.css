@@ -1,0 +1,147 @@
+body {
+  background-color: black;
+  margin: 0;
+  color: red;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  color: red;
+  border: 5px solid red;
+  position: relative;
+  top: 10vh;
+  border-radius: 10px;
+  /* border-collapse: collapse; */
+}
+
+th {
+  width: 130px;
+  height: 65px;
+  font-size: 1.5rem;
+  font-family: "Limelight", sans-serif;
+}
+
+/* th:nth-child(odd) {
+  background-color: #380505;
+} */
+
+td {
+  width: 130px;
+  height: 130px;
+  text-align: center;
+  font-family: "Sansation", sans-serif;
+  font-size: 1.5rem;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #380505;
+}
+
+.cover-container {
+  display: flex;
+  justify-content: center;
+}
+
+.book-cover {
+  width: 90px;
+  height: 110px;
+  border-radius: 5px;
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #380505, red) 1;
+}
+
+tbody > tr:nth-child(odd) .book-cover {
+  border-radius: 5px;
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(to right, red, black) 1; 
+}
+
+div[id="orwell-1984"] {
+  background-image: url(./assets/1984.jpg);
+  background-size: cover;
+}
+
+div[id="verne-la-isla-misteriosa"] {
+  background-image: url(./assets/laIslaMisteriosa.jpg);
+  background-size: cover;
+}
+
+.book-status {
+  width: 115px;
+  height: 50px;
+  background-color: greenyellow;
+  color: green;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+}
+
+.book-status.not-read {
+  background-color: #9e0000;
+  color: red;
+}
+
+.book-status-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modify-status-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modify-status-container > button {
+  background-color: inherit;
+  border: none;
+}
+
+.modify-status-container > button > svg {
+  height: 2.5rem;
+  fill: #696969;
+}
+
+/* Toggle switch imported from freefrontend.com */
+
+input.book-status-modifier {
+  --s: 1.3rem; /* adjust this to control the size*/
+  
+  height: calc(var(--s) + var(--s)/5);
+  width: auto; /* some browsers need this */
+  aspect-ratio: 2.25;
+  border-radius: var(--s);
+  margin: calc(var(--s)/2);
+  display: grid;
+  cursor: pointer;
+  background-color:#9e0000; 
+  box-sizing: content-box;
+  overflow: hidden;
+  transition: .3s .1s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input:before{
+  content: "";
+  padding: calc(var(--s)/10);
+  --_g: radial-gradient(circle closest-side at calc(100% - var(--s)/2) 50%,#000 96%,#0000);
+  background: 
+    var(--_g) 0 /var(--_p,var(--s)) 100% no-repeat content-box,
+    var(--_g) var(--_p,0)/var(--s)  100% no-repeat content-box,
+    #fff;
+  mix-blend-mode: darken;
+  filter: blur(calc(var(--s)/12)) contrast(11);
+  transition: .4s, background-position .4s .1s,
+    padding cubic-bezier(0,calc(var(--_i,-1)*200),1,calc(var(--_i,-1)*200)) .25s .1s;
+}
+input:checked {
+  background-color: greenyellow; 
+}
+input:checked:before {
+  padding: calc(var(--s)/10 + .05px) calc(var(--s)/10);
+  --_p: 100%;
+  --_i: 1;
+}
