@@ -12,6 +12,10 @@
 </head>
 <body>
   <div id="table container">
+    <button id="add-book">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus</title><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>
+      <span>Add a Book</span>
+    </button>
     <table>
       <thead>
         <tr>
@@ -27,8 +31,7 @@
         <tr>
           <td>
             <div class="cover-container">
-              <div class="book-cover" id="orwell-1984">
-              </div>
+              <div class="book-cover" id="orwell-1984"></div>
             </div>
           </td>
           <td>George Orwell</td>
@@ -36,7 +39,7 @@
           <td>355</td>
           <td>
             <div class="book-status-container">
-              <div class="book-status not-read">Not Read</div>
+              <div class="book-status read">Read</div>
             </div>
           </td>
           <td>
@@ -44,15 +47,14 @@
               <button>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
               </button>
-              <input type="checkbox" class="book-status-modifier">
+              <input type="checkbox" class="book-status-modifier" checked title="modify status">
             </div>
           </td>
         </tr>
         <tr>
           <td>
             <div class="cover-container">
-              <div class="book-cover" id="verne-la-isla-misteriosa">
-              </div>
+              <div class="book-cover" id="verne-la-isla-misteriosa"></div>
             </div>
           </td>
           <td>Jules Verne</td>
@@ -63,31 +65,83 @@
               <div class="book-status read">Read</div>
             </div>
           </td>
-          <td></td>
+          <td>
+            <div class="modify-status-container">
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </button>
+              <input type="checkbox" class="book-status-modifier" checked title="modify status">
+            </div>
+          </td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>
+            <div class="cover-container">
+              <div class="book-cover" id="solzhenitsyn-one-day"></div>
+            </div>
+          </td>
+          <td>Alexander Solzhenitsyn</td>
+          <td>One Day in the Life of Ivan Denisovich</td>
+          <td>181</td>
+          <td>
+            <div class="book-status-container">
+              <div class="book-status not-read">Not Read</div>
+            </div>
+          </td>
+          <td>
+            <div class="modify-status-container">
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </button>
+              <input type="checkbox" class="book-status-modifier" title="modify status">
+            </div>
+          </td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>
+            <div class="cover-container">
+              <div class="book-cover" id="martinez-crimenes"></div>
+            </div>
+          </td>
+          <td>Guillermo Martinez</td>
+          <td>The Oxford Murders</td>
+          <td>243</td>
+          <td>
+            <div class="book-status-container">
+              <div class="book-status read">Read</div>
+            </div>
+          </td>
+          <td>
+            <div class="modify-status-container">
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </button>
+              <input type="checkbox" class="book-status-modifier" checked title="modify status">
+            </div>
+          </td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>
+            <div class="cover-container">
+              <div class="book-cover" id="carroll-alice"></div>
+            </div>
+          </td>
+          <td>Lewis Carroll</td>
+          <td>Alice in Wonderland</td>
+          <td>157</td>
+          <td>
+            <div class="book-status-container">
+              <div class="book-status read">Read</div>
+            </div>
+          </td>
+          <td>
+            <div class="modify-status-container">
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </button>
+              <input type="checkbox" class="book-status-modifier" checked title="modify status">
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>

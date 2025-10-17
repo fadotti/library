@@ -9,10 +9,9 @@ body {
 table {
   color: red;
   border: 5px solid red;
+  border-radius: 10px;
   position: relative;
   top: 10vh;
-  border-radius: 10px;
-  /* border-collapse: collapse; */
 }
 
 th {
@@ -20,11 +19,8 @@ th {
   height: 65px;
   font-size: 1.5rem;
   font-family: "Limelight", sans-serif;
+  padding: 0 3px;
 }
-
-/* th:nth-child(odd) {
-  background-color: #380505;
-} */
 
 td {
   width: 130px;
@@ -32,6 +28,7 @@ td {
   text-align: center;
   font-family: "Sansation", sans-serif;
   font-size: 1.5rem;
+  padding: 0 3px;
 }
 
 tbody > tr:nth-child(odd) {
@@ -69,6 +66,21 @@ div[id="verne-la-isla-misteriosa"] {
   background-size: cover;
 }
 
+div[id="solzhenitsyn-one-day"] {
+  background-image: url(./assets/oneDayInTheLifeOfIvan.jpg);
+  background-size: cover;
+}
+
+div[id="martinez-crimenes"] {
+  background-image: url(./assets/crimenes-imperceptibles-nueva-ed.jpg);
+  background-size: cover;
+}
+
+div[id="carroll-alice"] {
+  background-image: url(./assets/Alice-in-Wonderland-CE-head_on.jpg);
+  background-size: cover;
+}
+
 .book-status {
   width: 115px;
   height: 50px;
@@ -103,6 +115,51 @@ div[id="verne-la-isla-misteriosa"] {
   height: 2.5rem;
   fill: #696969;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
+button#add-book {
+  height: 50px;
+  width: 250px;
+  position: relative;
+  top: 10vh;
+  margin-bottom: 10px;
+  background-color: inherit;
+  border: red solid 3px;
+  border-radius: 5px;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Limelight", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+button#add-book > svg {
+  height: 2.5rem;
+  fill: red;  
+}
+
+button#add-book > span {
+  position: relative;
+  top: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Toggle switch imported from freefrontend.com */
 
