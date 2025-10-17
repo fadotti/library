@@ -116,6 +116,10 @@ div[id="carroll-alice"] {
   fill: #696969;
 }
 
+.modify-status-container > button > svg:hover {
+  fill: #4f4f4f;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -148,6 +152,92 @@ button#add-book > span {
   position: relative;
   top: 4px;
 }
+
+button#add-book:hover {
+  border-color: #380505;
+}
+
+dialog#deletion-dialog {
+  height: 200px;
+  width: 500px;
+  background-color: black;
+  border: red solid 3px;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: -20vh;
+  outline: 0;
+  color: red;
+}
+
+dialog#deletion-dialog > div {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 6fr 3fr;
+}
+
+div.deletion-dialog-row {
+  display: flex;
+}
+
+div.deletion-dialog-row:nth-child(1) > button {
+  background-color: inherit;
+  border: 0;
+  outline: 0;
+}
+
+div.deletion-dialog-row:nth-child(1) > button:hover {
+  cursor: default;
+}
+
+div.deletion-dialog-row > button > svg {
+  height: 2.5rem;
+  fill: red;
+}
+
+div.deletion-dialog-row > button > svg:hover {
+  height: 2.5rem;
+  fill: #380505;
+  cursor: pointer;
+}
+
+div.deletion-dialog-row > button > svg:hover > rect {
+  fill: white;
+}
+
+div.deletion-dialog-row:nth-child(1) {
+  justify-content: flex-end;
+}
+
+div.deletion-dialog-row:nth-child(2) {
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Limelight", sans-serif;
+}
+
+div.deletion-dialog-row:nth-child(3) > button {
+  outline: none;
+  border: 0;
+  background-color: red;
+  color: black;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-family: "Limelight", sans-serif;
+}
+
+div.deletion-dialog-row:nth-child(3) > button:hover {
+  outline: none;
+  border: 0;
+  background-color: #380505;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-family: "Limelight", sans-serif;
+}
+
+
 
 
 
