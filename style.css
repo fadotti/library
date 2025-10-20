@@ -177,11 +177,12 @@ dialog#deletion-dialog > div {
   grid-template-rows: 1fr 6fr 3fr;
 }
 
-div.deletion-dialog-row {
+div.deletion-dialog-row, div.add-book-dialog-row {
   display: flex;
 }
 
-div.deletion-dialog-row:nth-child(1) > button {
+div.deletion-dialog-row:nth-child(1) > button, 
+div.add-book-dialog-row:nth-child(1) > button {
   background-color: inherit;
   border: 0;
   outline: 0;
@@ -191,33 +192,73 @@ div.deletion-dialog-row:nth-child(1) > button:hover {
   cursor: default;
 }
 
-div.deletion-dialog-row > button > svg {
+div.deletion-dialog-row > button > svg, 
+div.add-book-dialog-row > button > svg {
   height: 2.5rem;
   fill: red;
 }
 
-div.deletion-dialog-row > button > svg:hover {
+div.deletion-dialog-row > button > svg:hover, 
+div.add-book-dialog-row > button > svg:hover {
   height: 2.5rem;
   fill: #380505;
   cursor: pointer;
 }
 
-div.deletion-dialog-row > button > svg:hover > rect {
+div.deletion-dialog-row > button > svg:hover > rect, 
+div.add-book-dialog-row > button > svg:hover > rect {
   fill: white;
 }
 
-div.deletion-dialog-row:nth-child(1) {
+div.deletion-dialog-row:nth-child(1),
+div.add-book-dialog-row:nth-child(1) {
   justify-content: flex-end;
 }
 
-div.deletion-dialog-row:nth-child(2) {
+div.deletion-dialog-row:nth-child(2),
+div.add-book-dialog-row:nth-child(2) {
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-size: 2rem;
   font-family: "Limelight", sans-serif;
 }
 
-div.deletion-dialog-row:nth-child(3) > button {
+div.add-book-dialog-row:nth-child(2) {
+  align-items: center;
+}
+
+div.add-book-dialog-row:nth-child(2) > div {
+  width: 90%;
+  height: 80%;
+}
+
+div.add-book-dialog-row:nth-child(2) > div > div {
+  display: grid;
+  gap: 5px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+label + input {
+  height: 2rem;
+  width: 90%;
+}
+
+label + input[type="text"] {
+  outline: none;
+  border: red solid 3px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-family: "Sansation", sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+div.deletion-dialog-row:nth-child(3) > button, 
+div.add-book-dialog-row:nth-child(3) > button {
   outline: none;
   border: 0;
   background-color: red;
@@ -227,7 +268,15 @@ div.deletion-dialog-row:nth-child(3) > button {
   font-family: "Limelight", sans-serif;
 }
 
-div.deletion-dialog-row:nth-child(3) > button:hover {
+div.add-book-dialog-row:nth-child(3) > button {
+  background-color: greenyellow;
+  height: 70%;
+  align-self: flex-end;
+  margin: 20px;
+}
+
+div.deletion-dialog-row:nth-child(3) > button:hover,
+div.add-book-dialog-row:nth-child(3) > button:hover {
   outline: none;
   border: 0;
   background-color: #380505;
@@ -237,19 +286,36 @@ div.deletion-dialog-row:nth-child(3) > button:hover {
   font-family: "Limelight", sans-serif;
 }
 
+div.add-book-dialog-row:nth-child(3) > button:hover {
+  background-color: green;
+}
 
+dialog#add-book-dialog {
+  height: 700px;
+  width: 500px;
+  background-color: black;
+  border: red solid 3px;
+  border-radius: 5px;
+  padding: 5px;
+  outline: 0;
+  color: red;
+}
 
+dialog#add-book-dialog > form {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 12fr 2fr; 
+}
 
+div.add-book-dialog-row > button > svg {
+  height: 2.5rem;
+  fill: red;
+}
 
-
-
-
-
-
-
-
-
-
+dialog::backdrop {
+  backdrop-filter: blur(15px);
+}
 
 /* Toggle switch imported from freefrontend.com */
 

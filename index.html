@@ -167,6 +167,39 @@
     </div>
   </dialog>
 
+  <dialog id="add-book-dialog">
+    <form method="dialog">
+      
+      <div class="add-book-dialog-row">
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <rect x="20%" y="20%" width="60%" height="60%" fill="black"/>
+            <title>close</title>
+            <path d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" />
+          </svg>
+        </button>
+      </div>
+      <div class="add-book-dialog-row form-content">
+        <div>
+            <div>
+              <label for="author">Author *</label>
+              <input type="text" id="author" minlength="2" maxlength="50" required>
+              <label for="title">Title *</label>
+              <input type="text" id="title" minlength="2" maxlength="50" required>
+              <label for="No. of Pages">No. of Pages *</label>
+              <input type="text" id="number-of-pages" pattern="^[1-9]\d{0,19}$" title="Please enter a positive integer." inputmode="numeric" required>
+              <label for="Cover">Cover *</label>
+              <input type="file" id="cover" accept=".jpg, .jpeg, .png" required>
+            </div>
+        </div>
+      </div>
+      <div class="add-book-dialog-row">
+        <button>Add Book</button>
+      </div>
+
+    </form>
+  </dialog>
+
   <script src="./script.js" defer></script>
 </body>
 </html>
