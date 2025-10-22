@@ -64,6 +64,7 @@ tbody > tr:nth-child(odd) .book-cover {
   display: grid;
   place-items: center;
   border-radius: 15px;
+  font-weight: bold;
 }
 
 .book-status.not-read {
