@@ -104,10 +104,39 @@ deleteConfirmationButton.addEventListener('click', () => {
   const tableBody = document.querySelector('tbody');
   const rowToDelete = tableBody.querySelector(`tr:nth-of-type(${currentDeletionIndex + 1})`);
   rowToDelete.remove();
-  removeModifyStatusFunctionality()
+  removeModifyStatusFunctionality();
   addModifyStatusFunctionality();
   addDeletionButtonFunctionality();
 
   const deletionDialog = document.querySelector('#deletion-dialog');
   deletionDialog.close();
+})
+
+const addBookButton = document.querySelector('#add-book');
+addBookButton.addEventListener('click', () => {
+  const addBookDialog = document.querySelector('#add-book-dialog');
+  addBookDialog.showModal();
+})
+
+const addBookConfirmationButton = document.querySelector('.add-book-dialog-row:last-child > button');
+addBookConfirmationButton.addEventListener('click', () => {
+  if(document.querySelector('#author').checkValidity() && document.querySelector('#title').checkValidity()
+  && document.querySelector('#number-of-pages').checkValidity() && document.querySelector('#cover').checkValidity()) {
+    const author = document.querySelector('#author').value;
+    const title = document.querySelector('#title').value;
+    const numberOfPages = document.querySelector('#number-of-pages').value;
+    const coverUrl = URL.createObjectURL(document.querySelector('#cover').files[0]);
+
+    addBookToLibrary(title, author, numberOfPages, 0, coverUrl);
+
+    removeModifyStatusFunctionality();
+    addModifyStatusFunctionality();
+    addDeletionButtonFunctionality();
+  }
+})
+
+const closeDialogButtons = document.querySelectorAll('.close-dialog');
+closeDialogButtons.forEach((button) => {
+  const parentDialog = button.closest('dialog');
+  button.addEventListener('click', () => parentDialog.close());
 })

@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="table container">
+  <div id="table-container">
     <button id="add-book">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus</title><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>
       <span>Add a Book</span>
@@ -31,12 +31,14 @@
 
       </tbody>
     </table>
+
+    <div>Source code available at <a href="https://github.com/fadotti/library">https://github.com/fadotti/library</a></div>
   </div>
 
   <dialog id="deletion-dialog">
     <div>
       <div class="deletion-dialog-row">
-        <button>
+        <button class="close-dialog">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect x="20%" y="20%" width="60%" height="60%" fill="black"/>
             <title>close</title>
@@ -57,7 +59,7 @@
     <form method="dialog">
       
       <div class="add-book-dialog-row">
-        <button>
+        <button class="close-dialog">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect x="20%" y="20%" width="60%" height="60%" fill="black"/>
             <title>close</title>
@@ -72,7 +74,7 @@
               <input type="text" id="author" minlength="2" maxlength="50" required>
               <label for="title">Title *</label>
               <input type="text" id="title" minlength="2" maxlength="50" required>
-              <label for="No. of Pages">No. of Pages *</label>
+              <label for="number-of-pages">No. of Pages *</label>
               <input type="text" id="number-of-pages" pattern="^[1-9]\d{0,19}$" title="Please enter a positive integer." inputmode="numeric" required>
               <label for="Cover">Cover *</label>
               <input type="file" id="cover" accept=".jpg, .jpeg, .png" required>

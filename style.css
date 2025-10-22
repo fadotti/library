@@ -4,14 +4,14 @@ body {
   color: red;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 table {
   color: red;
   border: 5px solid red;
   border-radius: 10px;
-  position: relative;
-  top: 10vh;
 }
 
 th {
@@ -102,8 +102,6 @@ button:hover {
 button#add-book {
   height: 50px;
   width: 250px;
-  position: relative;
-  top: 10vh;
   margin-bottom: 10px;
   background-color: inherit;
   border: red solid 3px;
@@ -116,6 +114,7 @@ button#add-book {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-top: 5vh;
 }
 
 button#add-book > svg {
@@ -290,6 +289,28 @@ div.add-book-dialog-row > button > svg {
 
 dialog::backdrop {
   backdrop-filter: blur(15px);
+}
+
+div#table-container {
+  display: flex;
+  flex-direction: column;
+}
+
+div#table-container > div {
+  color: white;
+  align-self: center;
+}
+
+div#table-container > div > a {
+  color: white;
+}
+
+div#table-container > div > a:hover {
+  color: red;
+}
+
+div#table-container > div > a:visited {
+  color: white;
 }
 
 /* Toggle switch imported from freefrontend.com */
