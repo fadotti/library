@@ -300,6 +300,8 @@ div#table-container {
 div#table-container > div {
   color: white;
   align-self: center;
+  font-family: 'Calculator', sans-serif;
+  font-size: 1.2rem;
 }
 
 div#table-container > div > a {
