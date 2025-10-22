@@ -305,12 +305,12 @@ div#table-container > div > a {
   color: white;
 }
 
-div#table-container > div > a:hover {
-  color: red;
-}
-
 div#table-container > div > a:visited {
   color: white;
+}
+
+div#table-container > div > a:hover {
+  color: red;
 }
 
 /* Toggle switch imported from freefrontend.com */
