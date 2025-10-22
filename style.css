@@ -56,31 +56,6 @@ tbody > tr:nth-child(odd) .book-cover {
   border-image: linear-gradient(to right, red, black) 1; 
 }
 
-div[id="orwell-1984"] {
-  background-image: url(./assets/1984.jpg);
-  background-size: cover;
-}
-
-div[id="verne-la-isla-misteriosa"] {
-  background-image: url(./assets/laIslaMisteriosa.jpg);
-  background-size: cover;
-}
-
-div[id="solzhenitsyn-one-day"] {
-  background-image: url(./assets/oneDayInTheLifeOfIvan.jpg);
-  background-size: cover;
-}
-
-div[id="martinez-crimenes"] {
-  background-image: url(./assets/crimenes-imperceptibles-nueva-ed.jpg);
-  background-size: cover;
-}
-
-div[id="carroll-alice"] {
-  background-image: url(./assets/Alice-in-Wonderland-CE-head_on.jpg);
-  background-size: cover;
-}
-
 .book-status {
   width: 115px;
   height: 50px;
