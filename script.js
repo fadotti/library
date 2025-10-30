@@ -1,19 +1,18 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read, coverHref) {
-  if (!new.target) {
-    throw Error("You must use the 'new' operator to call the constructor");
-  }  
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.bookId = crypto.randomUUID();
-  this.coverHref = coverHref;
-  this.info = function() {
-    const isRead = read ? "read" : "not read yet";
-    return title + " by " + author + `, ${pages} pages, ` + isRead;
-  };
+class Book {
+  constructor(title, author, pages, read, coverHref) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.bookId = crypto.randomUUID();
+    this.coverHref = coverHref;
+    this.info = function() {
+      const isRead = read ? "read" : "not read yet";
+      return title + " by " + author + `, ${pages} pages, ` + isRead;
+    };
+  }
 }
 
 function addBookToLibrary(title, author, pages, read, coverHref) {
@@ -141,6 +140,17 @@ closeDialogButtons.forEach((button) => {
   button.addEventListener('click', () => parentDialog.close());
 })
 
-
-
-//testing branch update on git
+class Books {
+  constructor(title, author, pages, read, coverHref) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.bookId = crypto.randomUUID();
+    this.coverHref = coverHref;
+    this.info = function() {
+      const isRead = read ? "read" : "not read yet";
+      return title + " by " + author + `, ${pages} pages, ` + isRead;
+    };
+  }
+}
