@@ -68,8 +68,8 @@ tbody > tr:nth-child(odd) .book-cover {
 }
 
 .book-status.not-read {
-  background-color: #9e0000;
-  color: red;
+  background-color: red;
+  color: #9e0000;
 }
 
 .book-status-container {
@@ -328,7 +328,7 @@ input.book-status-modifier {
   margin: calc(var(--s)/2);
   display: grid;
   cursor: pointer;
-  background-color:#9e0000; 
+  background-color:red; 
   box-sizing: content-box;
   overflow: hidden;
   transition: .3s .1s;
