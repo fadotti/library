@@ -154,3 +154,40 @@ class Books {
     };
   }
 }
+
+const author = document.querySelector("#add-book-dialog #author");
+author.setCustomValidity("The author name must be provided and be at least 2 characters long.");
+author.addEventListener("input", () => {
+  if (author.value.length < 2) {
+    author.setCustomValidity("The author name must be provided and be at least 2 characters long.");
+    author.reportValidity();
+  }
+  else {
+    author.setCustomValidity("");
+  }
+})
+
+const title = document.querySelector("#add-book-dialog #title");
+title.setCustomValidity("The title must be provided and be at least 2 characters long.");
+title.addEventListener("input", () => {
+  if (title.value.length < 2) {
+    title.setCustomValidity("The title must be provided and be at least 2 characters long.");
+    title.reportValidity();
+  }
+  else {
+    title.setCustomValidity("");
+  }
+})
+
+const noPages = document.querySelector("#number-of-pages");
+noPages.setCustomValidity("The number of pages must be at most 5 digits long and contain only numbers");
+noPages.addEventListener("input", () => {
+  const validationRegex = /^[1-9]\d{0,4}$/;
+  if (!validationRegex.test(noPages.value)) {
+    noPages.setCustomValidity("The number of pages must be at most 5 digits long and contain only numbers");
+    noPages.reportValidity();
+  }
+  else {
+    noPages.setCustomValidity("");
+  }
+})
